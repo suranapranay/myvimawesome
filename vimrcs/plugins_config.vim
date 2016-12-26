@@ -167,3 +167,22 @@ nnoremap <silent> <leader>c :call SyntasticCheckCoffeescript()<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gitgutter_enabled=0
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""CTAGS""""""""""""""""""""""""
+fun! FindTagsFileInGitDir(file)
+    let path = fnamemodify(a:file, ':p:h')
+    while path != '/'
+        let fname = path . '/.git/tags'
+        if filereadable(fname)
+            silent! exec 'set tags+=' . fname
+        endif
+        let path = fnamemodify(path, ':h')
+    endwhile
+endfun
+
+augroup CtagsGroup
+    autocmd!
+    autocmd BufRead * call FindTagsFileInGitDir(expand("<afile>"))
+augroup END
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
