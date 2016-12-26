@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # The Ultimate vimrc
 
 Over the last 8 years I have used and tweaked Vim. This is my Ultimate vimrc.
@@ -312,3 +313,6 @@ Do following:
 * Remove `~/.vim_runtime`
 * Remove any lines that refernce `.vim_runtime` in your `~/.vimrc`
 
+=======
+# myvimawesome
+>>>>>>> 9c0dd6e04da920eaf1bd75aeee1ddeeca36011fb
