@@ -186,3 +186,5 @@ augroup CtagsGroup
     autocmd BufRead * call FindTagsFileInGitDir(expand("<afile>"))
 augroup END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set tags=./tags;,./TAGS;,tags,TAGS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
