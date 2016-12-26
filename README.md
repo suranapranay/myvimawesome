@@ -316,3 +316,7 @@ Do following:
 =======
 # myvimawesome
 >>>>>>> 9c0dd6e04da920eaf1bd75aeee1ddeeca36011fb
+
+
+
+ADDED CTAGS. Check the plugins config  to see how it works.
